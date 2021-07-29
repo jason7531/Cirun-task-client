@@ -3,6 +3,7 @@ import Layout from "./components/layout/Layout";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
 import "./App.css";
 import { Route, Switch, Redirect } from "react-router-dom";
+
 const Login = React.lazy(() => import("./pages/Login"));
 const Repos = React.lazy(() => import("./pages/Repos"));
 function App() {

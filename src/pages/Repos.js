@@ -3,7 +3,9 @@ import FolderIcon from "@material-ui/icons/Folder";
 
 const Repos = () => {
   const [repoData, setRepoData] = useState([]);
+  // The below function fetches all the repos and stores it in a state
   const addRepos = async () => {
+    // returns user info
     const response = await fetch("http://localhost:4000/index", {
       method: "GET",
       credentials: "include",
@@ -15,6 +17,7 @@ const Repos = () => {
       const data = await response.json();
       console.log(data);
       const name = data.gh_username;
+      // return user repos
       const repoRes = await fetch(`http://localhost:4000/user/${name}`, {
         method: "GET",
         credentials: "include",
@@ -24,12 +27,12 @@ const Repos = () => {
       });
       if (repoRes.ok) {
         const repoDatas = await repoRes.json();
-        console.log(repoDatas);
+
         setRepoData(repoDatas.repo_info);
-        console.log(repoData);
       }
     }
   };
+  // Runs for the first time when rendered
   useEffect(() => {
     addRepos();
   }, []);
