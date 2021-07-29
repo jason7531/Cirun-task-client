@@ -4,8 +4,8 @@ An application used to authenticate a user via github login and display all the 
 
 # Project Screenshots
 
-![Alt text](/public/assets/image1.jpg?raw=true "Login Page")
-![Alt text](/public/assets/image2.jpg?raw=true "Repos Page")
+![Alt text](/public/assets/image1.jpeg?raw=true "Login Page")
+![Alt text](/public/assets/image2.jpeg?raw=true "Repos Page")
 
 # How to get started
 
